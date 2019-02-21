@@ -10,23 +10,17 @@ namespace Tests
         }
 
         [Test]
-        public void bi()
+        public void tests()
         {
-            string result = Program.Prefix("hello");
-            Assert.AreEqual("5,1:hello", result);
-        }
-        [Test]
-        public void bii()
-        {
-            string result = Program.Prefix("");
-            Assert.AreEqual("0,0:", result);
-        }
-        [Test]
-        public void biii()
-        {
-            string result = Program.Prefix("what    ...  did you say?? ");
-            Assert.AreEqual("27,5:what    ...  did you say?? ", result);
-        }
+            //Test 1 - 3
+            Assert.AreEqual("5,1:hello", Program.Prefix("hello"));
+            Assert.AreEqual("0,0:", Program.Prefix(""));
+            Assert.AreEqual("27,5:what    ...  did you say?? ", Program.Prefix("what    ...  did you say?? "));
 
+            //My Tests
+            Assert.AreEqual("11,2:Two words! ", Program.Prefix("Two words! "));
+            Assert.AreEqual("10,3:123 456  1", Program.Prefix("123 456  1"));
+            Assert.AreEqual(null, Program.Prefix(null));
+        }
     }
 }
