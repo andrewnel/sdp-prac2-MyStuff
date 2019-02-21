@@ -12,14 +12,14 @@ namespace Problems
             else
             {
                 string[] split = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                return($"{input.Length}, {split.Length}:{input}");
+                return($"{input.Length},{split.Length}:{input}");
             }
         }
         static void Main(string[] args)
         {
             Console.WriteLine(Prefix("hello"));
             Console.WriteLine(Prefix(""));
-            Console.WriteLine(Prefix("what    ...  did you say?? "));
+            Console.WriteLine(Prefix("what    ... did you say?? "));
         }
     }
 }
