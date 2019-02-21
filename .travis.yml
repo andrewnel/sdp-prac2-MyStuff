@@ -3,7 +3,8 @@ dotnet: 2.2
 script:
         dotnet test Problems.Tests
 matrix:
-        - dist: xenial
-        - dist: trusty
-        - dotnet: 2.0.0
-          os: osx
+        include:
+                - dist: xenial
+                - dist: trusty
+                - dotnet: 2.0.0
+                - os: osx
